@@ -1,6 +1,7 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
+import Icon from './components/icon.vue'
 
 </script>
 
@@ -16,14 +17,19 @@ import TheWelcome from './components/TheWelcome.vue'
   <main>
     <!-- <TheWelcome /> -->
     <div class=" !bg-white w-10 h-10"></div>
-    <svg class="w-10 h-10 !fill-inherit !text-white">
+    <svg class="w-8 h-8 text-white">
       <use xlink:href="#icon-male" ></use>
     </svg>
+     <svg class="w-8 h-8 text-white">
+      <use xlink:href="#icon-swipe" ></use>
+    </svg>
+    <Icon class="icon" name="swipe"></Icon>
   </main>
 </template>
 
 <style>
 @import './assets/base.css';
+
 #app {
   max-width: 1280px;
   margin: 0 auto;
@@ -81,5 +87,10 @@ a,
   .logo {
     margin: 0 2rem 0 0;
   }
+}
+/* 設置SVG path currentColor */
+.svgIcon path {
+    fill: currentColor ;
+    stroke: currentColor;
 }
 </style>
